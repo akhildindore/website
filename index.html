@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✦ AKHIL DINDORE ✦ WELCOME TO MY PROJECTS</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Blue-focused overrides */
+    :root {
+      --ps2-red: #0066ff;
+      --ps2-blue: #00aaff;
+      --ps2-purple: #3366ff;
+      --y2k-pink: #00ccff;
+      --neon-cyan: #00ffff;
+      --matrix-green: #00ffcc;
+      --border-red: rgba(0, 102, 255, 0.4);
+      --border-blue: rgba(0, 170, 255, 0.3);
+      --glow-red: rgba(0, 102, 255, 0.5);
+      --glow-blue: rgba(0, 170, 255, 0.4);
+    }
+    
+    /* Simplified header */
+    .portal-header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 2px solid rgba(0, 102, 255, 0.3);
+      background: linear-gradient(to bottom, rgba(10, 10, 30, 0.9), transparent);
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .portal-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #00aaff, #0066ff, #00ffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: bluePulse 4s ease infinite;
+      margin-bottom: 10px;
+    }
+    
+    @keyframes bluePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    
+    .portal-subtitle {
+      color: #00ffff;
+      font-size: 1rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      font-family: 'Share Tech Mono', monospace;
+    }
+    
+    /* Resume Button - Blue PS2 Style */
+    .resume-btn-container {
+      margin: 20px 0;
+    }
+    
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: linear-gradient(45deg, #0066ff, #00aaff);
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      border: 2px solid rgba(0, 170, 255, 0.4);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .resume-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .resume-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(0, 102, 255, 0.6);
+      border-color: #00ffff;
+    }
+    
+    .resume-btn:hover::before {
+      left: 100%;
+    }
+    
+    .resume-btn i {
+      font-size: 1rem;
+      animation: downloadPulse 2s infinite;
+    }
+    
+    @keyframes downloadPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(3px); }
+    }
+    
+    /* Project cards - blue focus */
+    .project-card {
+      background: rgba(10, 10, 30, 0.8);
+      border: 2px solid rgba(0, 102, 255, 0.4);
+      padding: 30px;
+      color: #e0f0ff;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border-radius: 8px;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: #00ffff;
+      box-shadow: 
+        0 15px 40px rgba(0, 102, 255, 0.4),
+        inset 0 0 30px rgba(0, 170, 255, 0.1);
+    }
+    
+    .project-logo {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      display: block;
+      filter: drop-shadow(0 0 10px #0066ff);
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover .project-logo {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 20px #00ffff);
+    }
+    
+    .project-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      color: #00ffff;
+      text-align: center;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .project-tag {
+      background: rgba(0, 102, 255, 0.2);
+      color: #00ccff;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-family: 'Share Tech Mono', monospace;
+      border: 1px solid rgba(0, 102, 255, 0.4);
+      border-radius: 12px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+    
+    /* Status bar */
+    .system-status {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.85rem;
+    }
+    
+    .status-item {
+      color: #00ffff;
+      padding: 5px 15px;
+      border: 1px solid rgba(0, 102, 255, 0.3);
+      background: rgba(0, 0, 20, 0.5);
+    }
+    
+    .status-active {
+      color: #00ffcc;
+      animation: statusBlink 2s infinite;
+    }
+    
+    @keyframes statusBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    
+    /* Grid layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Loading indicator */
+    .loading-indicator {
+      width: 200px;
+      height: 4px;
+      background: rgba(0, 102, 255, 0.2);
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    
+    .loading-bar {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #0066ff, #00ffff);
+      animation: loadingSlide 2s linear infinite;
+    }
+    
+    @keyframes loadingSlide {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    /* Footer minimal */
+    .portal-footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6688cc;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(0, 102, 255, 0.2);
+      background: rgba(5, 5, 15, 0.8);
+    }
+    
+    /* CRT effects - blue tint */
+    .crt-overlay {
+      background:
+        linear-gradient(rgba(0, 8, 16, 0) 50%, rgba(0, 0, 0, .25) 50%),
+        linear-gradient(90deg,
+          rgba(0, 51, 255, .03),
+          rgba(0, 170, 255, .02),
+          rgba(0, 102, 255, .03)
+        );
+      background-size: 100% 4px, 6px 100%;
+    }
+    
+    .scanlines {
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0) 0px,
+        rgba(0,0,0,0) 1px,
+        rgba(0, 102, 255, .05) 1px,
+        rgba(0, 102, 255, .05) 2px
+      );
+    }
+    
+    /* Card description styling */
+    .project-description {
+      color: #b0d0ff;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Effect layers -->
+  <div class="crt-overlay"></div>
+  <div class="scanlines"></div>
+  <div class="noise-layer"></div>
+  
+  <!-- Minimal header -->
+  <header class="portal-header">
+    <h1 class="portal-title">AKHIL DINDORE</h1>
+    <p class="portal-subtitle">WELCOME TO MY PROJECTS</p>
+    
+    <div class="loading-indicator">
+      <div class="loading-bar"></div>
+    </div>
+    
+    <!-- Resume Button -->
+    <div class="resume-btn-container">
+      <a href="https://drive.google.com/file/d/your-resume-id/view?usp=sharing" 
+         class="resume-btn" 
+         target="_blank"
+         rel="noopener">
+        <i class="fas fa-download"></i>
+        DOWNLOAD RESUME
+      </a>
+    </div>
+    
+    <div class="system-status">
+      <div class="status-item">PROJECTS: <span class="status-active">ONLINE</span></div>
+      <div class="status-item">SYSTEM: <span class="status-active">STABLE</span></div>
+      <div class="status-item">ACCESS: <span class="status-active">OPEN</span></div>
+    </div>
+  </header>
+  
+  <!-- Projects grid -->
+  <main class="projects-grid">
+    <!-- Medium -->
+    <a class="project-card" href="https://medium.com/@akhil25" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968933.png" 
+           class="project-logo" 
+           alt="Medium">
+      <h3 class="project-name">MEDIUM</h3>
+      <p class="project-description">
+        kinda daily blogs.
+      </p>
+      <div class="project-tag">WRITING ACTIVE</div>
+    </a>
+    
+    <!-- Substack -->
+    <a class="project-card" href="https://aglimmeringrey.substack.com/" target="_blank" rel="noopener">
+      <img src="images/substack.png" 
+           class="project-logo" 
+           alt="Substack">
+      <h3 class="project-name">SUBSTACK</h3>
+      <p class="project-description">
+        If you love short stories.
+      </p>
+      <div class="project-tag">STORIES LIVE</div>
+    </a>
+    
+    <!-- ThinkWhy -->
+    <a class="project-card" href="https://whythinkwhy.com/" target="_blank" rel="noopener">
+      <img src="images/thinkwhy.png" 
+           class="project-logo" 
+           alt="thinkWHY">
+      <h3 class="project-name">THINKWHY</h3>
+      <p class="project-description">
+        A Brain Child of Mine.
+      </p>
+      <div class="project-tag">INQUIRY ACTIVE</div>
+    </a>
+  </main>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <h2 class="about-title">
+        <span class="title-icon">✦</span>
+        ABOUT
+        <span class="title-icon">✦</span>
+      </h2>
+      
+      <div class="about-content">
+        <p class="about-text">
+          <span class="text-highlight">Oh! Well Hello! So, you scrolled till here, you must be curious about me,
+            I am human just like you with interest in Research and Data, I know it's not enough to satiate your curiosity, but well
+            you can download my resume to know more.
+        </p>
+        
+        <p class="about-text">
+          Those are my projects that I work on and I want to take it a far especially thinkWHY which I think will help me in thinking that
+          one day all humans will start to think, ha! ha! got you.
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal footer -->
+  <footer class="portal-footer">
+    <p>✦ SYSTEM ONLINE ✦ BLUE PS2 INTERFACE ✦ PROJECT FOCUSED ✦</p>
+    <p style="margin-top: 10px; font-size: 0.7rem; color: #4466aa;">
+      All projects are active missions in progress
+    </p>
+  </footer>
+
+  <script>
+    // Simple hover effects
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.zIndex = '10';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.zIndex = '1';
+      });
+    });
+    
+    // Status animation
+    const statusItems = document.querySelectorAll('.status-active');
+    setInterval(() => {
+      statusItems.forEach(item => {
+        item.style.opacity = Math.random() > 0.5 ? '1' : '0.7';
+      });
+    }, 500);
+    
+    // Resume button hover effect
+    const resumeBtn = document.querySelector('.resume-btn');
+    resumeBtn.addEventListener('mouseenter', () => {
+      resumeBtn.style.background = 'linear-gradient(45deg, #00aaff, #0066ff)';
+    });
+    
+    resumeBtn.addEventListener('mouseleave', () => {
+      resumeBtn.style.background = 'linear-gradient(45deg, #0066ff, #00aaff)';
+    });
+    
+    // Simple click effect for project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Add a subtle click feedback
+        card.style.transform = 'translateY(-4px) scale(0.99)';
+        setTimeout(() => {
+          card.style.transform = '';
+        }, 150);
+      });
+    });
+  </script>
+</body>
+</html>
